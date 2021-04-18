@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-position: center;
+  background-image: url("domeBackground.jpg");
+  height: 400px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 2.5em;
+  padding: 30px;
+}
+
+.App-tagline {
+  font-size: 1.5em;
+  padding: 30px;
+}
+
+.App-intro {
+  font-size: large;
+  padding: 30px;
+}
+
+.App-body {
+  font-size: large;
+  padding: 30px;
+}
+
+pa {
+  padding-bottom: 3cm;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
