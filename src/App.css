@@ -8,25 +8,32 @@
 }
 
 .App-header {
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 65%;
   background-image: url("campfire.jpg");
-  height: 400px;
+  background-size: cover;
+  height: 600px;
+  color: white;
+}
+
+.Small-header {
+  background-position-x: center;
+  background-position-y: 65%;
+  background-image: url("campfire.jpg");
+  background-size: auto;
+  height: 80px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 2.5em;
+  font-size: 60px;
   padding: 30px;
+  padding-top: 120px;
 }
 
 .App-tagline {
-  font-size: 1.5em;
-  padding: 30px;
-}
-
-.App-intro {
-  font-size: large;
+  font-size: 32px;
   padding: 30px;
 }
 
@@ -35,8 +42,43 @@
   padding: 30px;
 }
 
-pa {
-  padding-bottom: 3cm;
+.App ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  background-color: black;
+  opacity: 60%;
+}
+
+.App li {
+  display: inline-block;
+  margin: 20px;
+  font-size: 24px;
+}
+
+.App a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: #f88e00;
+  border: none;
+  color: #555566;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration:none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+button:focus,
+button:hover {
+  background-color: #c06d00;
+  color: #44444b;
 }
 
 @keyframes App-logo-spin {
