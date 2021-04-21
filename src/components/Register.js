@@ -6,7 +6,19 @@ class Register extends Component {
     return (
       <div className="Register">
         <header className="Small-header">
-          <h1 className="App-title">Welcome to Campfire!</h1>
+          <nav>
+              <ul>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/register">Register</a>
+                </li>
+                <li>
+                  <a href="/login">Login</a>
+                </li>
+              </ul>
+            </nav>
         </header>
         <p className="App-body">
           <button href="https://www.github.com">

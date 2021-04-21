@@ -1,21 +1,6 @@
 :root{
   --fire-orange: #f88e00;
   --dark-orange: #c06d00;
-}
-
-.App {
-  text-align: center;
-}
-
-.Home {
-  text-align: center;
-}
-
-.Register {
-  text-align: center;
-}
-
-.Login {
   text-align: center;
 }
 
@@ -33,8 +18,7 @@
   background-position-y: 65%;
   background-image: url("campfire.jpg");
   background-size: auto;
-  height: 80px;
-  padding: 20px;
+  height: 68px;
   color: white;
 }
 
@@ -54,7 +38,7 @@
   padding: 30px;
 }
 
-.Home ul {
+:root ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -65,19 +49,19 @@
   opacity: 60%;
 }
 
-.Home li {
+:root li {
   display: inline-block;
   margin: 20px;
   font-size: 24px;
 }
 
-.Home a {
+:root a {
   text-decoration: none;
   color: white;
 }
 
-.Home a:hover,
-.Home a:active {
+:root a:hover,
+:root a:active {
   color: var(--fire-orange)
 }
 

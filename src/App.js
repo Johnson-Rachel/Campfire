@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Home from './components/Home';
 import Register from './components/Register';
+import Login from './components/Login'
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
         <div>
           <Route path="/" exact component={ Home } />
           <Route path="/register" exact component={ Register } />
-          <Route path="/login" exact render={() => <h1>Login</h1>} />
+          <Route path="/login" exact component={ Login } />
         </div>
       </BrowserRouter>  
     );
