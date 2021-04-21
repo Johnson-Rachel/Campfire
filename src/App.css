@@ -1,10 +1,7 @@
-.App {
+:root{
+  --fire-orange: #f88e00;
+  --dark-orange: #c06d00;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .App-header {
@@ -21,8 +18,7 @@
   background-position-y: 65%;
   background-image: url("campfire.jpg");
   background-size: auto;
-  height: 80px;
-  padding: 20px;
+  height: 68px;
   color: white;
 }
 
@@ -42,7 +38,7 @@
   padding: 30px;
 }
 
-.App ul {
+:root ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -53,19 +49,24 @@
   opacity: 60%;
 }
 
-.App li {
+:root li {
   display: inline-block;
   margin: 20px;
   font-size: 24px;
 }
 
-.App a {
+:root a {
   text-decoration: none;
   color: white;
 }
 
+:root a:hover,
+:root a:active {
+  color: var(--fire-orange)
+}
+
 button {
-  background-color: #f88e00;
+  background-color: var(--fire-orange);
   border: none;
   color: #555566;
   padding: 15px 32px;
@@ -77,7 +78,7 @@ button {
 
 button:focus,
 button:hover {
-  background-color: #c06d00;
+  background-color: var(--dark-orange);
   color: #44444b;
 }
 
