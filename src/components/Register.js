@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 
-class App extends Component {
+class Register extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Register">
         <header className="Small-header">
-          <pa></pa>
           <h1 className="App-title">Welcome to Campfire!</h1>
         </header>
         <p className="App-body">
           <button href="https://www.github.com">
-            Login
+            This is different
           </button>
         </p>
         <p className="App-body">
@@ -24,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Register;
