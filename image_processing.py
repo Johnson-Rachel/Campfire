@@ -1,11 +1,11 @@
-# Imports
 import numpy as np
 import pandas as pd
-import time
+from time import time
 from skimage.filters import threshold_otsu
 from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 import scipy.ndimage as ndi
+from os import remove
 
 
 # Load Image and Convert to Grayscale
@@ -25,11 +25,12 @@ for label in labels:
     bboxes = ndi.find_objects(ob_mask)
     im_ob = foreground[bboxes[0]]
     im_ob_and_time['Image'] = im_ob
-    im_ob_and_time['Time'] = time.time()
+    im_ob_and_time['Time'] = time()
     current_objects.append(im_ob_and_time, ignore_index=True)
 
 # Import Existing Objects & Create DataFrame to Write New Ones To
-prior_objects = pd.read_csv('where images were stored')
+object_storage_filepath = 'where images are stored'
+prior_objects = pd.read_csv(object_storage_filepath)
 new_objects = pd.DataFrame(columns=['Image', 'Time'])
 
 # Compare Current to Prior
@@ -50,9 +51,13 @@ for c_ob in current_objects:
 nrows = current_objects.size / 2
 times = list()
 for i in range(nrows):
-    list[i] = round((time.time() - current_objects.iloc[i, 1]) * 60)
+    list[i] = round((time() - current_objects.iloc[i, 1]) * 60)
 
 # Produce Image to Display Which Has Markers on It
 
+
+# Delete Old File and Write Into New One
+os.remove(object_storage_filepath)
+current_objects.to_csv(object_storage_filepath)
 
 # Done
