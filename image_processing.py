@@ -6,6 +6,7 @@ from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
 import scipy.ndimage as ndi
 from os import remove
+from os.path import exists
 
 
 # Load Image and Convert to Grayscale
@@ -30,25 +31,22 @@ for label in labels:
 
 # Import Existing Objects & Create DataFrame to Write New Ones To
 object_storage_filepath = 'where images are stored'
-prior_objects = pd.read_csv(object_storage_filepath)
-new_objects = pd.DataFrame(columns=['Image', 'Time'])
-
-# Compare Current to Prior
-for c_ob in current_objects:
-    match = 0
-    for p_ob in prior_objects:
-        diff = np.absolute(c_ob['Image'] - p_ob['Image'])
-        total = np.sum(c_ob['Image'])
-        if (diff / total) < 0.2:
-            c_ob['Time'] = p_ob['Time']
-            match = 1
-        if match == 1:
-            break
-    if match == 0:
-        new_objects.append(c_ob)  # If Not Already There, Then Record It
+if exists(object_storage_filepath):
+    prior_objects = pd.read_csv(object_storage_filepath)
+    # Compare Current to Prior
+    for c_ob in current_objects:
+        match = 0
+        for p_ob in prior_objects:
+            diff = np.absolute(c_ob['Image'] - p_ob['Image'])
+            total = np.sum(c_ob['Image'])
+            if (diff / total) < 0.2:
+                c_ob['Time'] = p_ob['Time']
+                match = 1
+            if match == 1:
+                break
 
 # Compare Times to See How Long It's Been There
-nrows = current_objects.size / 2
+nrows = current_objects.shape[0]
 times = list()
 for i in range(nrows):
     list[i] = round((time() - current_objects.iloc[i, 1]) * 60)
@@ -57,7 +55,8 @@ for i in range(nrows):
 
 
 # Delete Old File and Write Into New One
-os.remove(object_storage_filepath)
+if exists(object_storage_filepath):
+    remove(object_storage_filepath)
 current_objects.to_csv(object_storage_filepath)
 
 # Done
