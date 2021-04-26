@@ -19,15 +19,17 @@ foreground = gray_image > thresh
 
 # Find Objects
 labels, nlabels = ndi.label(foreground)
-current_objects = pd.DataFrame(columns=['Image', 'Time'])
+current_objects = pd.DataFrame(columns=['Image', 'Time', 'Box'])
 for label in labels:
-    im_ob_and_time = dict()
+    object_info = dict()
     ob_mask = np.where(labels == label, 1, 0)
     bboxes = ndi.find_objects(ob_mask)
-    im_ob = foreground[bboxes[0]]
-    im_ob_and_time['Image'] = im_ob
-    im_ob_and_time['Time'] = time()
-    current_objects.append(im_ob_and_time, ignore_index=True)
+    image_section = bboxes[0]
+    im_ob = foreground[image_section]
+    object_info['Image'] = im_ob
+    object_info['Time'] = time()
+    object_info['Box'] = image_section
+    current_objects.append(object_info, ignore_index=True)
 
 # Import Existing Objects & Create DataFrame to Write New Ones To
 object_storage_filepath = 'where images are stored'
