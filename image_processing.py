@@ -25,11 +25,12 @@ for label in labels:
     ob_mask = np.where(labels == label, 1, 0)
     bboxes = ndi.find_objects(ob_mask)
     image_section = bboxes[0]
-    im_ob = foreground[image_section]
+    im_ob = original_image[image_section]
     object_info['Image'] = im_ob
     object_info['Time'] = time()
     object_info['Box'] = image_section
-    current_objects.append(object_info, ignore_index=True)
+    object_df = pd.DataFrame(data=object_info, index=range(1))
+    current_objects.append(object_df, ignore_index=True)
 
 # Import Existing Objects & Create DataFrame to Write New Ones To
 object_storage_filepath = 'where images are stored'
@@ -54,7 +55,7 @@ for i in range(nrows):
     list[i] = round((time() - current_objects.iloc[i, 1]) * 60)
 
 # Produce Image to Display Which Has Markers on It
-
+b
 
 # Delete Old File and Write Into New One
 if exists(object_storage_filepath):
