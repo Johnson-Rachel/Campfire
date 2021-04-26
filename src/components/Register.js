@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
+import logo from '../logo.png';
+import AppForm from './form.js';
 
 class Register extends Component {
   render() {
@@ -9,7 +11,7 @@ class Register extends Component {
           <nav>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/"><img className="logo" src={logo}></img> Home</a>
                 </li>
                 <li>
                   <a href="/register">Register</a>
@@ -21,14 +23,7 @@ class Register extends Component {
             </nav>
         </header>
         <p className="App-body">
-          <button href="https://www.github.com">
-            This is different
-          </button>
-        </p>
-        <p className="App-body">
-          <button href="https://github.com/Johnson-Rachel/Campfire">
-            Register
-          </button>
+          <AppForm />
         </p>
       </div>
     );
