@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import logo from '../logo.png'
 
 class Home extends Component {
   render() {
@@ -9,7 +10,7 @@ class Home extends Component {
             <nav>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/"><img className="logo" src={logo}></img> Home</a>
                 </li>
                 <li>
                   <a href="/register">Register</a>
