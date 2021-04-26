@@ -15,4 +15,4 @@ df = df.filter(items=['Username','Password'])
 
 print(df)
 
-df.to_csv(r'C:\Users\augus\Documents\Python Scripts\accounts.csv', columns=['Username','Password'])
+df.to_csv(r'.\accounts.csv', columns=['Username','Password'])
