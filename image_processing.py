@@ -7,10 +7,12 @@ import matplotlib.pyplot as plt
 import scipy.ndimage as ndi
 from os import remove
 from os.path import exists
-
+from PIL import Image
+from PIL import ImageDraw
 
 # Load Image and Convert to Grayscale
-original_image = plt.imread('image filepath')
+image_filepath = 'image filepath'
+original_image = plt.imread(image_filepath)
 gray_image = rgb2gray(original_image)
 
 # Create and Apply Threshold
@@ -55,11 +57,15 @@ for i in range(nrows):
     list[i] = round((time() - current_objects.iloc[i, 1]) * 60)
 
 # Produce Image to Display Which Has Markers on It
-b
+image = Image.open(image_filepath)
+draw = ImageDraw.Draw(image)
+for i in len(current_objects.index):
+    draw.text((x-coor, y-coor), str(i), (red, green, blue))
 
-# Delete Old File and Write Into New One
+# Delete Old File and Old Image and Write Into New Ones
 if exists(object_storage_filepath):
     remove(object_storage_filepath)
 current_objects.to_csv(object_storage_filepath)
-
-# Done
+if exists(image_filepath):
+    remove(image_filepath)
+image.save(image_filepath)
