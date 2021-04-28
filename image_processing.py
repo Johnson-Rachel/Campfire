@@ -11,7 +11,7 @@ from PIL import Image
 from PIL import ImageDraw
 
 # Load Image and Convert to Grayscale
-image_filepath = 'image filepath'
+image_filepath = './mostrecentphoto.png'
 original_image = plt.imread(image_filepath)
 gray_image = rgb2gray(original_image)
 
@@ -50,12 +50,6 @@ if exists(object_storage_filepath):
             if match == 1:
                 break
 
-# Compare Times to See How Long It's Been There
-nrows = current_objects.shape[0]
-times = list()
-for i in range(nrows):
-    list[i] = round((time() - current_objects.iloc[i, 1]) * 60)
-
 # Produce Image to Display Which Has Markers on It
 image = Image.open(image_filepath)
 draw = ImageDraw.Draw(image)
@@ -66,6 +60,4 @@ for i in len(current_objects.index):
 if exists(object_storage_filepath):
     remove(object_storage_filepath)
 current_objects.to_csv(object_storage_filepath)
-if exists(image_filepath):
-    remove(image_filepath)
-image.save(image_filepath)
+image.save('./annotatedpicture.png')
