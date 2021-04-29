@@ -1,7 +1,7 @@
 import cv2
 
 # Load Image and Convert to Grayscale
-image_filepath = '2021-04-29/20210429_182801.jpg'
+image_filepath = 'cam2/20210429_183254.jpg'
 image = cv2.imread(image_filepath)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
