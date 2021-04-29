@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import logo from "../logo.png"
 
 //images
 import a1 from "../assets/1.jpg";
@@ -26,7 +27,7 @@ class FoodCam extends Component {
      this.setState({
         activeImageIndex: newActiveIndex
      })
-   }, 1000);
+   }, 2000);
  }
   render() {
     return (
@@ -35,7 +36,7 @@ class FoodCam extends Component {
           <nav>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/"><img className="logo" src={logo}></img> Home</a>
                 </li>
                 <li>
                   <a href="/food-cam">Food Cam</a>
