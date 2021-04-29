@@ -1,7 +1,6 @@
 import { useForm } from "react-cool-form";
 import React, { Component } from "react";
 import '../App.css';
-import "./form.scss";
 import logo from '../logo.png';
 
 const AppForm = () => {
@@ -16,7 +15,6 @@ const AppForm = () => {
   return (
     <form ref={form} noValidate>
       <div>
-        <img className="logo" src={logo}></img>
         <input name="email" type="email" placeholder="Email" required />
         {errors.email && <p>{errors.email}</p>}
       </div>

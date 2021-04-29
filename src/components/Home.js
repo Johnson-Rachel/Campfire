@@ -12,11 +12,16 @@ class Home extends Component {
                 <li>
                   <a href="/"><img className="logo" src={logo}></img> Home</a>
                 </li>
+                {/*
                 <li>
                   <a href="/register">Register</a>
                 </li>
                 <li>
                   <a href="/login">Login</a>
+                </li>
+                */}
+                <li>
+                  <a href="/food-cam">Food Cam</a>
                 </li>
               </ul>
             </nav>

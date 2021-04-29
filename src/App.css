@@ -72,6 +72,10 @@
   background-position-y: center;
 }
 
+.images {
+  padding: 30px;
+}
+
 button {
   background-color: var(--fire-orange);
   border: none;
@@ -94,3 +98,4 @@ button:hover {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

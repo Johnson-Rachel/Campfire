@@ -23,7 +23,7 @@ class Register extends Component {
             </nav>
         </header>
         <p className="App-body">
-          <AppForm />
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </p>
       </div>
     );
