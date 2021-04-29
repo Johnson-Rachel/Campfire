@@ -21,7 +21,13 @@ class Home extends Component {
                 </li>
                 */}
                 <li>
-                  <a href="/food-cam">Food Cam</a>
+                  <a href="/food-cam-a">CS Lounge</a>
+                </li>
+                <li>
+                  <a href="/food-cam-b">Phlounge</a>
+                </li>
+                <li>
+                  <a href="/food-cam-c">Flaherty Kitchen</a>
                 </li>
               </ul>
             </nav>
