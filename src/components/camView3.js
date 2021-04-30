@@ -3,20 +3,20 @@ import '../App.css';
 import logo from "../logo.png"
 
 //images
-import b1 from "../assets/test2/1a.jpg";
-import b2 from "../assets/test2/2a.jpg";
-import b3 from "../assets/test2/3a.jpg";
-import b4 from "../assets/test2/4a.jpg";
-import b5 from "../assets/test2/5a.jpg";
-import b6 from "../assets/test2/6a.jpg";
-import b7 from "../assets/test2/7a.jpg";
-import b8 from "../assets/test2/8a.jpg";
-import b9 from "../assets/test2/9a.jpg";
-import b10 from "../assets/test2/10a.jpg";
+import a00 from "../assets/cam3/00.jpg";
+import a01 from "../assets/cam3/01.jpg";
+import a02 from "../assets/cam3/02.jpg";
+import a03 from "../assets/cam3/03.jpg";
+import a04 from "../assets/cam3/04.jpg";
+import a05 from "../assets/cam3/05.jpg";
+import a06 from "../assets/cam3/06.jpg";
+import a07 from "../assets/cam3/07.jpg";
+import a08 from "../assets/cam3/08.jpg";
+import a09 from "../assets/cam3/09.jpg";
 
  class FoodCam3 extends Component {
   state = {
-    bars:[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10],
+    bars:[a00,a01,a02,a03,a04,a05,a06,a07,a08,a09],
     activeImageIndex: 0
  }
   componentDidMount(){

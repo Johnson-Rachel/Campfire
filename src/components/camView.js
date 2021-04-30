@@ -3,27 +3,31 @@ import '../App.css';
 import logo from "../logo.png"
 
 //images
-import a1 from "../assets/1.jpg";
-import a2 from "../assets/2.jpg";
-import a3 from "../assets/3.jpg";
-import a4 from "../assets/4.jpg";
-import a5 from "../assets/5.jpg";
-import a6 from "../assets/6.jpg";
-import a7 from "../assets/7.jpg";
-import a8 from "../assets/8.jpg";
-import a9 from "../assets/9.jpg";
-import a10 from "../assets/10.jpg";
-import a11 from "../assets/11.jpg";
-import a12 from "../assets/12.jpg";
+import a00 from "../assets/cam1/00.jpg";
+import a01 from "../assets/cam1/01.jpg";
+import a02 from "../assets/cam1/02.jpg";
+import a03 from "../assets/cam1/03.jpg";
+import a04 from "../assets/cam1/04.jpg";
+import a05 from "../assets/cam1/05.jpg";
+import a06 from "../assets/cam1/06.jpg";
+import a07 from "../assets/cam1/07.jpg";
+import a08 from "../assets/cam1/08.jpg";
+import a09 from "../assets/cam1/09.jpg";
+import a10 from "../assets/cam1/10.jpg";
+import a11 from "../assets/cam1/11.jpg";
+import a12 from "../assets/cam1/12.jpg";
+import a13 from "../assets/cam1/13.jpg";
+import a14 from "../assets/cam1/14.jpg";
+import a15 from "../assets/cam1/15.jpg";
 
 class FoodCam extends Component {
   state = {
-    bars:[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12],
+    bars:[a00,a01,a02,a03,a04,a05,a06,a07,a08,a09,a10,a11,a12,a13,a14,a15],
     activeImageIndex: 0
  }
   componentDidMount(){
    setInterval(()=>{
-     let newActiveIndex = this.state.activeImageIndex===11 ? 0 : this.state.activeImageIndex+1     
+     let newActiveIndex = this.state.activeImageIndex===15 ? 0 : this.state.activeImageIndex+1     
      this.setState({
         activeImageIndex: newActiveIndex
      })
