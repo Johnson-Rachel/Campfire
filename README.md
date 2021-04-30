@@ -17,7 +17,7 @@ We built the front end of the website using ReactJS, HTML, and CSS. The backend 
 We had trouble identifying individual objects with the general computer vision models already available, but we fine tuned the parameters to work relatively well for simple objects and we plan to develop a custom model as we collect more data. 
 
 # Accomplishments
-This was our first time working with React, so we are proud of the multi-page web app that we developed. We also used the OpenCV libraries to identify individual objects relatively well. 
+This was our first time working with React, so we are proud of the multi-page web app that we developed. This was also our first time working with OpenCV, and we are proud that we were able identify individual objects relatively well given the limitations of a fairly generic algorithm like the Canny Edge Detector.
 
 # What's next for Campfire
-Our next step is to install 24/7 camera stations in dorm kitchens and community lounges so that data can be continually shared in real time. We also plan to develop a custom machine learning algorithm once sufficient data is collected for training.
+Our next step is to install 24/7 camera stations in dorm kitchens and community lounges so that data can be continually shared in real time. We also plan to develop a neural network to more precisely identify and track objects once sufficient data is collected to train a network.
