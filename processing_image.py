@@ -1,16 +1,16 @@
 import cv2
 
 # Load Image and Convert to Grayscale
-image_filepath = 'cam3/20210429_183558.jpg'
+image_filepath = 'cam3/20210429_183558.jpg'  # will eventually be linked to front-end camera
 image = cv2.imread(image_filepath)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-# Find Edges (via Canny
+# Find Edges & Contour of Objects
 edged = cv2.Canny(image, 10, 500)
 (cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,
                              cv2.CHAIN_APPROX_SIMPLE)
 
-# Isolate Objects and Save Them
+# Isolate Objects and Save Them as Individual Png Files
 idx = 0
 items = []
 for c in cnts:
