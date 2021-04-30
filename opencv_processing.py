@@ -1,7 +1,7 @@
 import cv2
 
 # Load Image and Convert to Grayscale
-image_filepath = 'cam2/20210429_183254.jpg'
+image_filepath = 'cam3/20210429_183558.jpg'
 image = cv2.imread(image_filepath)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -15,11 +15,11 @@ idx = 0
 items = []
 for c in cnts:
     x, y, w, h = cv2.boundingRect(c)
-    if w > 100 and h > 100:
+    if w > 150 and h > 150:
         idx += 1
         new_img = image[y:y + h, x:x + w]
         items.append((x, y))
-        cv2.imwrite('cvimages1/' + str(idx) + '.png', new_img)
+        cv2.imwrite('cvimages10/' + str(idx) + '.png', new_img)
 
 # Write on Item Numbers to Image
 for idx in range(len(items)):
