@@ -29,6 +29,9 @@ class Home extends Component {
                 <li>
                   <a href="/food-cam-c">Flaherty Kitchen</a>
                 </li>
+                 <li>
+                  <a href="/about">About</a>
+                </li>
               </ul>
             </nav>
             <h1 className="App-title">Welcome to Campfire</h1>

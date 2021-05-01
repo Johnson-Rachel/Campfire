@@ -104,3 +104,9 @@ button:hover {
   to { transform: rotate(360deg); }
 }
 
+.profile {
+  width: 300px;
+  height: 300px;
+  border-radius:150px;
+  margin:60px;
+}

@@ -8,6 +8,7 @@ import Login from './components/Login'
 import FoodCam from './components/camView';
 import FoodCam2 from './components/camView2';
 import FoodCam3 from './components/camView3';
+import About from './components/about';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/food-cam-a" exact component={ FoodCam } />
           <Route path="/food-cam-b" exact component={ FoodCam2 } />
           <Route path="/food-cam-c" exact component={ FoodCam3 } />
+          <Route path="/about" exact component={ About } />
         </div>
       </BrowserRouter>  
     );
