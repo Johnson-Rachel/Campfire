@@ -19,5 +19,7 @@ We had trouble identifying individual objects with the general computer vision m
 # Accomplishments
 This was our first time working with React, so we are proud of the multi-page web app that we developed. This was also our first time working with OpenCV, and we are proud that we were able identify individual objects relatively well given the limitations of a fairly generic algorithm like the Canny Edge Detector.
 
+![About Page](aboutpage.png)
+
 # What's next for Campfire
 Our next step is to install 24/7 camera stations in dorm kitchens and community lounges so that data can be continually shared in real time. We also plan to develop a neural network to more precisely identify and track objects once sufficient data is collected to train a network.
