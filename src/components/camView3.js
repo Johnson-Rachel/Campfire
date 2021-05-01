@@ -53,6 +53,9 @@ import a09 from "../assets/cam3/09.jpg";
                 <li>
                   <a href="/food-cam-c">Flaherty Kitchen</a>
                 </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
               </ul>
             </nav>
         </header>
